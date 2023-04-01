@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Edit</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'Principal/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#!">Edit</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Index' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Aboutme' %}">About me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'CreateBlog' %}">Create blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Blogs' %}">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Profile' %}">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Logout' %}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">¡Aquí podrás editar ciertos datos del blog!</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content changes -->
+        {% block changes %}
+
+            <br><br>
+            <form action="" method="POST">{% csrf_token %} 
+                <span style="padding: 0 20px;"></span><p><b>Title: </b><input type="text" name="title"></p>
+                <span style="padding: 0 20px;"></span><p><b>Subtitle: </b><input type="text" name="subtitle"></p>
+                <span style="padding: 0 20px;"></span><p><b>Body: </b><input type="text" name="body"></p>
+                <span style="padding: 0 20px;"></span><p><b>Author: </b><input type="text" name="author"></p>
+
+                <input type="submit" value="Save">
+
+                <br><br>
+                <a href="{% url 'Blogs' %}" class="px-2 py-2 ml-md-1 rounded"><b> Return</b></a>
+                <br><br>
+            </form>
+
+        {% endblock %}
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Página fundada por el atleta y programador Franco Navarro / 24 de Marzo del 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'Principal/js/scripts.js' %}"></script>
+    </body>
+</html>

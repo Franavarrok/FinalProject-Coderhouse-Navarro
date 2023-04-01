@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>About me</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'Principal/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#!">About me</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Index' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Aboutme' %}">About me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'CreateBlog' %}">Create blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Blogs' %}">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Profile' %}">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Logout' %}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content changes -->
+        {% block changes %}
+
+        {% endblock %}
+
+
+
+
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">¡Bienvenidos a mi blog personal!</h1>
+                    <p class="lead mb-0">Mi nombre completo es Franco Nicolas Navarro, y paso a comentarles un poco sobre mi, en cada imagen...</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="https://scontent.fmdz7-1.fna.fbcdn.net/v/t39.30808-6/302172087_5697019027016082_8078701283439213228_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=LjXbM09cNUIAX8UDMH5&_nc_ht=scontent.fmdz7-1.fna&oh=00_AfB2AQRJPS9S2tJjToS90tiFmVoNHNf2GiFKLq0UHBCx-g&oe=6423D019" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-muted">Marzo 24, 2023</div>
+                            <h2 class="card-title">¿Qué es sobre mi vida?</h2>
+                            <p class="card-text">Saludos cordiales principalmente, mi nombre es Franco Navarro... nací el 14 de Junio del 2001. Nací con espina bífida y después de 7 años de que yo naciera, habría una cirugía que saldría mal, y eso cambiaría mi vida para siempre...</p>
+
+                        </div>
+                    </div>
+                    <!-- Nested row for non-featured blog posts-->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://scontent.fmdz7-1.fna.fbcdn.net/v/t39.30808-6/323550482_1134314113949852_4231802143679501933_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=730e14&_nc_ohc=mq9oeP1csY8AX8kduxr&_nc_ht=scontent.fmdz7-1.fna&oh=00_AfB4sU_WN75NXdtIAZpptrBrsn0V12KzQtUsevh01fcDOw&oe=6422C8C2" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">Primer imagen</div>
+                                    <p class="card-text">Un camino lleno de obstáculos pero también de hermosos momentos, comenzaría... actualmente tengo 3 cirugías de médula, cientos en los pies, amputación del antepie izquierdo, gran dislocación de la cadera, atrofias musculares... pero</p>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://scontent.fmdz7-1.fna.fbcdn.net/v/t39.30808-6/275613929_5189200921131231_3641310015712558003_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=avUUWCc3aBgAX_A7sTg&_nc_ht=scontent.fmdz7-1.fna&oh=00_AfBwNdr75nSyjfLJiPlLQu1DO2gnuLBjTipHcYj73Fhqmw&oe=64243CF2" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">Tercera imagen</div>
+                                    <p class="card-text">Porque de eso se trata la vida, de que a pesar de que todo sea difícil, con esfuerzo y perseverancia... todo se puede. Y más si tuve la fortuna de tener a esta hermosa familia, que me apoyó y lo hace en cada momento de mi vida.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://scontent.fmdz7-1.fna.fbcdn.net/v/t39.30808-6/314694562_5891019000949416_156769989512238470_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=miA4syB7zzsAX-8gKGa&_nc_ht=scontent.fmdz7-1.fna&oh=00_AfCY19g-Ny1MSZ4On1f72Y7x_tptuGqa7FdgCDDQkRWLoQ&oe=64234BD1" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">Segunda imagen</div>
+                                    <p class="card-text">A pesar de que el camino fue duro y a veces pensaba que habían paredes que eran imposibles de poder trepar, siempre logré treparlas... y poder seguir hacia adelante.</p>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://scontent.fmdz7-1.fna.fbcdn.net/v/t39.30808-6/302172087_5697019027016082_8078701283439213228_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=LjXbM09cNUIAX8UDMH5&_nc_ht=scontent.fmdz7-1.fna&oh=00_AfB2AQRJPS9S2tJjToS90tiFmVoNHNf2GiFKLq0UHBCx-g&oe=6423D019" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">Cuarta imagen</div>
+                                    <p class="card-text">Y por último a los que puedan ver esta página, déjenme contarles sobre una frase que se me ocurrió en algún momento de mi vida.</p>
+                                    <p class="card-text">"Jamas se rindan, porque a veces... la esperanza de que todo algún día mejore, es más fuerte que cualquier otra cosa".</p>
+                                    <p class="card-text">Con esto me despido, fue un placer haber estudiado con ustedes. Gracias a todo el staff de Coderhouse. Ignacio, Bárbara, Sergio.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Side widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Objetivos...</div>
+                        <div class="card-body">Enfocarme en mis estudios, y en convertirme en el hombre que siempre he deseado ser. Y en el proceso, intentar motivar a la mayor cantidad de personas posibles... a que nada es imposible. Que con esfuerzo y perseverancia, todo se puede.</div>
+                    </div>
+                    <div class="small text-muted">Síganme para videos de motivación, gracias...</div>
+                    <a href="https://www.instagram.com/franavarrok/">Mi instagram</a>
+                    <a href="https://www.tiktok.com/@franavarrok">Mi TikTok</a>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Página fundada por el atleta y programador Franco Navarro / 24 de Marzo del 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'Principal/js/scripts.js' %}"></script>
+    </body>
+</html>

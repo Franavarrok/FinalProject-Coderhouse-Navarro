@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Calisthenics</title>
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'Principal/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#!">Calisthenics</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Index' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Aboutme' %}">About me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'CreateBlog' %}">Create blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Blogs' %}">Blogs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Profile' %}">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Logout' %}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Content changes -->
+        {% block changes %}
+
+        {% endblock %}
+
+
+
+
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">¡Bienvenido/a {{user}} al menú principal de Calistenia!</h1>
+                    <p class="lead mb-0">En esta página podremos publicar nuestras experiencias e incluso disfrutar de la de otras personas.</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="col-lg-8">
+                    <!-- Featured blog post-->
+                    <div class="card mb-4">
+                        <a href="#!"><img class="card-img-top" src="https://media.gq.com.mx/photos/6234825f1982a4c011ad4bff/master/pass/calistenia.jpg" alt="..." /></a>
+                        <div class="card-body">
+                            <div class="small text-muted">Marzo 24, 2023</div>
+                            <h2 class="card-title">¿Qué es la Calistenia?</h2>
+                            <p class="card-text">La calistenia es un proceso de ejercicios físicos con el propio peso corporal. En este sistema, el interés está en los movimientos de las cadenas musculares que componen nuestro cuerpo. Etimológicamente la palabra proviene del griego kalos y sthenos.</p>
+
+                        </div>
+                    </div>
+                    <!-- Nested row for non-featured blog posts-->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://scontent.fmdz7-1.fna.fbcdn.net/v/t39.30808-6/302172087_5697019027016082_8078701283439213228_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=LjXbM09cNUIAX8UDMH5&_nc_ht=scontent.fmdz7-1.fna&oh=00_AfB2AQRJPS9S2tJjToS90tiFmVoNHNf2GiFKLq0UHBCx-g&oe=6423D019" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">Septiembre 3, 2022</div>
+                                    <h2 class="card-title h4">Full Planche</h2>
+                                    <p class="card-text">La full planche o plancha completa es uno de los movimientos avanzados de calistenia que desafían la fuerza de todo nuestro core, en concreto de la parte central de nuestro cuerpo.</p>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://calistenia.org/wp-content/uploads/2021/06/osvaldo-lugones-front-lever.jpg" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">Junio 16, 2020</div>
+                                    <h2 class="card-title h4">Front Lever</h2>
+                                    <p class="card-text">El front lever o "palanca frontal" es un ejercicio de calistenia y gimnasia deportiva que se realiza en las barras y anillas.</p>
+                                    <p class="card-text">Manteniendo el cuerpo paralelo al suelo y completamente horizontal desde la cabeza pasando por cadera y rodillas hasta los tobillos.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://2.bp.blogspot.com/-c3dvJSVDYrs/WSrvHg-95VI/AAAAAAAADog/8gM0C2fwmOw7fYfo5-LudjV0Z_fdE7wCQCLcB/s1600/_DSC4902%2Brichard%2Bvictorian.jpg" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">Octubre 24, 2019</div>
+                                    <h2 class="card-title h4">Victorian</h2>
+                                    <p class="card-text">Es un ejercicio que requiere de una fuerza en la dorsal brutal.</p>
+                                    <p class="card-text">Se ejecuta apoyando los antebrazos en las barras paralelas, tumbando el cuerpo hacia atrás y aguantando recto al mismo nivel de la barra.</p>
+                                </div>
+                            </div>
+                            <!-- Blog post-->
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://nutricion360.es/wp-content/uploads/2019/06/calistenia-beneficios-1200x675.jpg" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">Enero 12, 2023</div>
+                                    <h2 class="card-title h4">Back lever One Arm (OA)</h2>
+                                    <p class="card-text">Es un ejercicio de calistenia que se realiza en las barras y ayuda al fortalecimiento de los músculos situados en el pectoral, bíceps, antebrazos, abdomen, lumbares y hombros.</p>
+                                    <p class="card-text">Pero en este caso, tenemos a una persona haciéndolo a un solo brazo, lo cuál requiere de una mayor dificultad.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Side widgets-->
+                <div class="col-lg-4">
+                    <!-- Categories widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Categorías isométricas</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Full planche</li>
+                                        <li>Front lever</li>
+                                        <li>Back lever</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Victorian</li>
+                                        <li>Maltesse</li>
+                                        <li>Etc...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Side widget-->
+                    <div class="card mb-4">
+                        <div class="card-header">Más información...</div>
+                        <div class="card-body">La calistenia aparte de ser un deporte que ayuda mucho tanto a la salud física, como a la mental. Ya que ayuda a generar una disciplina de control y en nuestro hábito de vida en general, como lo puede ser la alimentación también...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Página fundada por el atleta y programador Franco Navarro / 24 de Marzo del 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'Principal/js/scripts.js' %}"></script>
+    </body>
+</html>
