@@ -1,3 +1,5 @@
+Video requerido, subido a una carpeta de Drive: https://drive.google.com/drive/folders/1vpkenmGysX1AnqwYdnUCxvY0Eh8A3nx-?usp=share_link
+
 Nos encontramos a la vista de un proyecto tipo blog relacionado a la calistenia, en el cuál en el menú principal se intenta explicar más o menos ¿Qué es?.
 
 Una página interactiva, en la cual cuando los usuarios sean creados, puedan subir una breve explicación sobre lo que ellos decidan hablar, y que también puedan subir una imagen. Solo el administrador podrá eliminar, o editar cualquier dato subido. y que todos podrán ver lo que desee subir cada usuario.
